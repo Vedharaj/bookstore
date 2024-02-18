@@ -20,7 +20,11 @@ const SingleBook = () => {
       axios.get(baseURL+'book/'+id)
       .then((res)=>{
         setBook(res.data.data[0])
-        dispatch(fetchRelatedBooks(res.data.data[0].categories[0]))
+        if(res.data.data[0].categories){
+          dispatch(fetchRelatedBooks(res.data.data[0].categories[0]))
+        } else{
+          dispatch(fetchRelatedBooks("Drama"))
+        }
         setIsLoading(false)
       })
       .catch(e=>{
@@ -99,7 +103,7 @@ const SingleBook = () => {
             <div>
               <p className='md:text-sm text-xs text-secondary font-normal'>Genres</p>
               <Link to={'../../search?genres='+book.categories}>
-                <p className={`md:text-lg text-sm font-medium ${isDark?'text-white':'text-black'}`}>{book.categories}</p>
+                <p className={`md:text-lg text-sm font-medium ${isDark?'text-white':'text-black'}`}>{book.categories || "NaN"}</p>
               </Link>
             </div>
           </div>

@@ -44,6 +44,7 @@ const Search = () => {
     setPage(0)
     dispatch(setEmptySearchItems())
     dispatchSearch(genres_query)
+    setIsReachEnd(true)
   }, [])
 
   const Options = ()=>{
@@ -56,7 +57,6 @@ const Search = () => {
 
   const handleScroll =(e)=>{
     if(e.target.clientHeight + Math.floor(e.target.scrollTop) >= e.target.scrollHeight-10){
-      setIsReachEnd(true)
       setPage(ps=>ps+1)
       dispatchSearch(genres)
       }
@@ -89,10 +89,10 @@ const Search = () => {
         searchItems.length === 0 ?
           <NothingFound containerStyle={containerStyle} isDark={isDark}/>
         :
-          <div className={`overflow-y-auto h-[72vh] scrollbar-track-transparent scrollbar-thin mt-2 p-4
+          <div className={`overflow-y-auto h-[70vh] scrollbar-track-transparent scrollbar-thin mt-2 p-4
           ${isDark? 'scrollbar-thumb-white': 'scrollbar-thumb-black'}`}  style={containerStyle} onScroll={(e)=>handleScroll(e)}>
-          <div className="mb-18">
-            <div className='mt-2 flex flex-wrap md;gap-4 gap-2 justify-center'>
+          <div className="my-3">
+            <div className='flex flex-wrap md:gap-4 gap-2 justify-center'>
               {searchItems.map((i, ind)=><CommonCard key={ind} i={i} />)}
             </div>
             <div className='text-center mt-2'>

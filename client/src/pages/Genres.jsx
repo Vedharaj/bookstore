@@ -16,12 +16,14 @@ const Genres = () => {
 
   useEffect(()=>{
     dispatch(fetchGenres(pagination.genres))
+    .then(()=>{
+      setIsReachEnd(true)
+    })
   },[])
 
   const handleScroll =(e)=>{
     if(e.target.clientHeight + Math.floor(e.target.scrollTop) >= e.target.scrollHeight-10 ){
       if(pagination.genres < 3){
-        setIsReachEnd(true)
         dispatch(fetchGenres(pagination.genres))
       } else{
         setIsReachEnd(false)
@@ -36,11 +38,11 @@ const Genres = () => {
     isError ?
       <ErrorPage containerStyle={containerStyle} msg={isError} />
     :
-    <div className={`overflow-y-auto h-[16.5cm] scrollbar-track-transparent scrollbar-thin mt-2 p-4
+    <div className={`overflow-y-auto h-[80vh] scrollbar-track-transparent scrollbar-thin mt-2 p-4
     ${isDark? 'scrollbar-thumb-white': 'scrollbar-thumb-black'}`} style={containerStyle} onScroll={(e)=>handleScroll(e)}>
       <p className='text-primary md:text-lg text-sm font-bold'>Genres</p>
-      <div className="mb-20">
-        <div className='mt-2 flex flex-wrap md:gap-4 gap-2 justify-center'>
+      <div className="my-3">
+        <div className='flex flex-wrap md:gap-4 gap-2 justify-center'>
         {genres.map((i, ind)=><GenresCard key={ind} i={i} />)}
         </div>
         <div className='text-center'>

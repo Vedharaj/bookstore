@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const GenresCard = ({i, ind}) => {
   const navigate = useNavigate()
   const handleGenreClick = ()=>{
-    navigate('../search/?genres='+i.genre)
+    navigate('../search?genres='+i.genre)
   }
   return (
     <div className="cursor-pointer" key={ind} onClick={handleGenreClick}>
