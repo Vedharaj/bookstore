@@ -13,7 +13,10 @@ const PORT = process.env.PORT
 const DATABASE_URL = process.env.DATABASE_URL
 
 //difine cors
-app.use(cors())
+app.use(cors({
+    origin: process.env.ORIGIN.split(" "),
+    methods: "GET"
+}))
 
 //routers
 app.use("/bookstore/v1", bookRouter)
