@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
 
-export const baseURL = "http://localhost:5000/bookstore/v1/"
+export const baseURL = "https://bookstore-api-zmui.onrender.com/bookstore/v1/"
 
 const initialState = {
     isError: null,
