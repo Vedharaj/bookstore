@@ -13,7 +13,7 @@ const AuthorCard = ({i}) => {
       handleAuthorId(i, 0)
     }
   }
-  return (
+  return (  
     <div 
       onClick={handleAuthorClick} 
       className={`md:w-37 w-24 h-24 p-1 rounded-sm flex flex-col items-center cursor-pointer`} 

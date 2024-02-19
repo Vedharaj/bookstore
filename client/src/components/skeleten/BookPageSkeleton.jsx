@@ -5,7 +5,7 @@ import { containerContext } from '../SharedLayout'
 const BookPageSkeleton = () => {
     const {containerStyle, isDark} = useContext(containerContext)
   return (
-    <div className='grid md:grid-cols-9 md:grid-flow-col grid-flow-row mt-2 h-[60vh] p-4 w-full' style={{...containerStyle}}>
+    <div className='grid md:grid-cols-9 md:grid-flow-col grid-flow-row mt-2 h-screen p-4 w-full' style={{...containerStyle}}>
         <div className='flex flex-col  items-center md:col-span-2 '>
               <Skeleton variant="rectangular" sx={{fontSize:{md:'13rem',sm:"9rem", xs: "8rem"}, width: {md:'11rem',sm:"9rem", xs: 2/4}, backgroundColor: isDark && '#242526'}}  />
               <div className='text-center mt-2'>

@@ -20,7 +20,7 @@ const SharedLayout = () => {
   }
   return (
     <containerContext.Provider value={{containerStyle, isDark, isLoading, isError, dispatch}}>
-      <div className='flex gap-3 w-full relative'>
+      <div className='flex gap-2 w-full relative'>
           <Sidebar />
           <div className='w-full overflow-x-hidden'>
             <Navbar />

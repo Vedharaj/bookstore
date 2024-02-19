@@ -23,7 +23,7 @@ const App = () => {
     color: isDark ? "#fff" : '#000'
   }
   return (
-    <div style={pageStyle} className='h-screen md:p-3 p-1 text-roboto overflow-hidden  md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
+    <div style={pageStyle} className='h-screen md:p-2 p-1 text-roboto overflow-hidden  md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
       <Routes>
         <Route path='/' element={<SharedLayout />} >
           <Route index element={<Home />} />

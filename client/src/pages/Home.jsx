@@ -55,7 +55,7 @@ const Home = () => {
 
 
   return (
-    <div style={{zIndex: '10px',}} className={`overflow-y-auto h-[16.5cm] scrollbar-track-transparent scrollbar-thin mt-2
+    <div className={`overflow-y-auto h-screen scrollbar-track-transparent scrollbar-thin mt-2
       ${isDark? 'scrollbar-thumb-white': 'scrollbar-thumb-black'}`} onScroll={(e)=>handleScroll(e)}>
       {isLoading ?
       isError ?
@@ -67,8 +67,8 @@ const Home = () => {
         </div>
       :
       <authorContainer.Provider value={{authorId, handleAuthorId, setPage, setAuthorBooks, setAuthorId}}>
-        <div className='flex flex-col gap-2 md:mb-16 mb-10'>
-            <Container key={1} title="Top Authors" page={null} conStyle={{height: '9.5rem'}} data={authors}/>
+        <div className='flex flex-col gap-2'>
+            <Container key={1} title="Top Authors" page={null} conStyle={{height: ''}} data={authors}/>
           { authorId ?
           <div className='mb-20'>
             <div>
@@ -76,11 +76,11 @@ const Home = () => {
             </div>
           </div>
           :
-          <>
+          <div className="md:mb-28 mb-24 flex flex-col gap-2">
             <Container key={2} title="Most Popular" page="popular" data={popular}/>
             <Container key={3} title="Latest" page="latest" data={latest}/>
             <Container key={4} title="Genres" page="genres" data={genres}/>
-          </>
+          </div>
           }
         </div>  
       </authorContainer.Provider>}

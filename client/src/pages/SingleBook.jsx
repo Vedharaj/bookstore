@@ -35,7 +35,7 @@ const SingleBook = () => {
     isLoading ?
       <BookPageSkeleton />
     :
-    <div className='mb-2 h-[16.5cm] overflow-y-auto gap-2 mt-2 md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
+    <div className='mb-2 h-screen overflow-y-auto gap-2 mt-2 md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
       <div className='grid md:grid-flow-col md:grid-cols-auto grid-flow-row  gap-3 w-full md:h-[402px] p-4 ' style={{...containerStyle}}>
         <div className='md:col-span-1 flex flex-col items-center'>
           <img src={book.thumbnail} alt={book.title} className='md:max-w-[280px] md:max-h-[306px] max-w-36 max-h-52 object-fit'/>
@@ -109,7 +109,7 @@ const SingleBook = () => {
           </div>
         </AccordionDetails>
       </Accordion>
-      <div className='mt-2 md:mb-16 mb-10'>
+      <div className='mt-2 md:mb-24 mb-20'>
         <Container title="Related"/>
       </div>
     </div>  

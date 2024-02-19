@@ -8,7 +8,7 @@ import NothingFound from '../pages/others/NothingFound'
 const FullContainer = ({isLoading, authorId, data, isEnd}) => {
   const {containerStyle} = useContext(containerContext)
   return (
-    <div className='rounded py-2 px-4 overflow-hidden' style={containerStyle} >
+    <div className='rounded py-2 h-screen mb-2 px-4 overflow-hidden' style={containerStyle} >
         <h1>{authorId}</h1>
         {isLoading ?
         <CartSkeleten />

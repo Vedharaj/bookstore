@@ -89,13 +89,13 @@ const Search = () => {
         searchItems.length === 0 ?
           <NothingFound containerStyle={containerStyle} isDark={isDark}/>
         :
-          <div className={`overflow-y-auto h-[70vh] scrollbar-track-transparent scrollbar-thin mt-2 p-4
+          <div className={`overflow-y-auto h-screen scrollbar-track-transparent scrollbar-thin mt-2 p-4
           ${isDark? 'scrollbar-thumb-white': 'scrollbar-thumb-black'}`}  style={containerStyle} onScroll={(e)=>handleScroll(e)}>
           <div className="my-3">
             <div className='flex flex-wrap md:gap-4 gap-2 justify-center'>
               {searchItems.map((i, ind)=><CommonCard key={ind} i={i} />)}
             </div>
-            <div className='text-center mt-2'>
+            <div className='text-center mt-2 md:mb-36 mb-32'>
               {isReachEnd &&
                 <CircularProgress size={20} />
               }

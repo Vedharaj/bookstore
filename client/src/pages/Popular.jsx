@@ -32,14 +32,14 @@ const Popular = () => {
     isError ?
       <ErrorPage containerStyle={containerStyle} msg={isError} />
     :
-    <div className={`overflow-y-auto h-[80vh] scrollbar-track-transparent scrollbar-thin mt-2 p-4
+    <div className={`overflow-y-auto h-screen scrollbar-track-transparent scrollbar-thin mt-2 p-4
     ${isDark? 'scrollbar-thumb-white': 'scrollbar-thumb-black'}`}  style={containerStyle} onScroll={(e)=>handleScroll(e)}>
           <p className='text-primary md:text-lg text-sm font-bold'>Popular</p>
         <div className="my-3">
           <div className='flex flex-wrap md:gap-4 gap-2 justify-center'>
               {popular.map((i, ind)=><CommonCard key={ind} i={i} />)}
           </div>
-          <div className='text-center'>
+          <div className='text-center md:mb-24 mb-20'>
             {isReachEnd &&
               <CircularProgress size={20} />
             }

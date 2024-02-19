@@ -20,7 +20,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className='h-[94vh] w-44  py-3 px-5 drop-shadow-sm hidden md:visible md:flex flex-col justify-between' style={containerStyle}>
+    <div className='h-[97vh] w-44 py-3 px-5 drop-shadow-sm hidden md:visible md:flex flex-col justify-between' style={containerStyle}>
       <div>
         <Link to='/'><h2 className='text-2xl font-bold text-center text-nowrap text-primary'>Book Store</h2></Link>
         <div className='mt-5 flex flex-col' >
