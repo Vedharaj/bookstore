@@ -30,12 +30,12 @@ const Container = ({conStyle, title, page, data}) => {
     
     <div className=' rounded py-2 px-4 ' style={{...containerStyle, ...conStyle}}>
         <div className='flex justify-between'>
-            <p className='text-primary md:text-lg text-md font-bold'>{title}</p>
+            <p className='text-primary md:text-xl text-lg font-bold'>{title}</p>
             {page && 
               <Link to={page} className='text-xs md:text-md'>view all</Link>
             }
         </div>
-        <div className='mt-2 flex justify-start md:justify-center gap-2 md:gap-4 overflow-x-auto md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
+        <div className='mt-2 flex gap-2 md:gap-4 overflow-x-auto md:scrollbar-track-transparent md:scrollbar-thin scrollbar-none'>
           <Cart />
         </div>
     </div>

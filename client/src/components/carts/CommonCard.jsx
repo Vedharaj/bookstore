@@ -17,10 +17,10 @@ const CommonCard = ({i}) => {
       :
       <img src={no_book} alt={i.title} className='object-cover md:w-[4cm] md:h-[5cm] h-[3cm] w-[2.5cm]'/>
       }
-      <p className='md:text-md text-sm md:w-28 w-16 mt-1 text-nowrap text-ellipsis overflow-hidden'>{i.title}</p>
-      <div className='flex md:hidden visible'>
-        <p className=' text-[.3rem] text-secondary'>{`${i.averageRating?i.averageRating:0}(${i.ratingCount?i.ratingCount:0})`}</p>
-        <FaStar color='#F6E017'  className='ml-1 text-xs md:text-[1rem]'/>
+      <p className='md:text-lg text-sm md:w-28 w-16 mt-1 text-nowrap text-ellipsis overflow-hidden'>{i.title}</p>
+      <div className='flex items-center md:hidden visible'>
+        <p className=' text-sm text-secondary'>{`${i.averageRating?i.averageRating:0}(${i.ratingCount?i.ratingCount:0})`}</p>
+        <FaStar color='#F6E017'  className='ml-1 text-sm md:text-[1rem]'/>
       </div>
       <div className='hidden md:block'>
         <div className='flex'>
