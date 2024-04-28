@@ -1,5 +1,7 @@
 # VBookstore MERN Stack Web Application Documentation
 
+[![Author Vedharaj](https://img.shields.io/badge/Author-Vedharaj-d62828)](https://www.linkedin.com/in/ebaneshar-vedharaj-422566214)
+
 ## Introduction
 Welcome to the documentation for our Bookstore MERN (MongoDB, Express.js, React, Node.js) stack web application. This application allows users to browse, search, and purchase books online.
 
@@ -124,8 +126,10 @@ MongoDB database name is bookstore, it's has three collections namely,
 ## User Interface
 The user interface features a clean and intuitive design, allowing users to easily browse and purchase books.
 
-![Bookstore UI DARK](UI-images/book.jpg)
-![Bookstore UI search](UI-images/home-search-bar.jpg)
+![VBookstore UI DARK](UI-images/dark-home.jpg)
+![VBookstore UI search](UI-images/home-search-bar.jpg)
+
+`Figma link`: ![VBookstore]([UI-images/dark-home.jpg](https://www.figma.com/file/I1LwmrfuShUr1Ws2kLHG80/Bookstore?type=design&node-id=6%3A416&mode=dev&t=GNoSG0YRx1zKFmHo-1))
 
 ## Future Development
 - Implement user reviews and ratings for books.
